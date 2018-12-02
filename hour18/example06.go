@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func helloWrold(w http.ResponseWriter, r *http.Request) {
+func helloWorld(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
 		http.NotFound(w, r)
 		return
