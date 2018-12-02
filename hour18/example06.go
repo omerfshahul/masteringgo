@@ -9,7 +9,7 @@ import (
 
 func helloWrold(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
-		http.NotFound(r, w)
+		http.NotFound(w, r)
 		return
 	}
 	switch r.Method {
@@ -29,4 +29,9 @@ func helloWrold(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotImplemented)
 		w.Write([]byte(http.StatusText(http.StatusNotImplemented)))
 	}
+}
+
+func main() {
+	http.HandleFunc("/", helloWorld)
+	http.ListenAndServe(":8000", nil)
 }
