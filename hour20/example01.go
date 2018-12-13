@@ -9,12 +9,7 @@ type Person struct {
 	Hobbies []string
 }
 func main() {
-	hobbies := []string{
-		"Cycling",
-		"Cheese",
-		"Techno"
-	
-	}
+	hobbies := []string{ "Cycling", 	"Cheese", "Techno" 	}
 
 	p := Person {
 		Name: "George",
